@@ -1,0 +1,42 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "Api usando Node, Mongo e Express",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -s -D -d dist --presets env",
+    "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    }
+  },
+  "author": "Gilberto Barbosa",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security",
+    "helmet": "^3.13.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongo-sanitize": "^1.0.0",
+    "mongoose": "^5.2.6",
+    "nodemailer": "^4.6.7",
+    "nodemailer-express-handlebars": "^3.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2"
+  }
+}
